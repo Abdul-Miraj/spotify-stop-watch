@@ -63792,12 +63792,12 @@ var PlaylistCreator = function (_Component) {
         }, _this.onLoadPlaylists = function () {
             _axios2.default.get(_Constants2.default.SERVER_URL + 'users/' + _this.props.spotifyId + '/playlists/').then(function (res) {
                 _this.setState({ playlist_data: res.data.items });
+                localStorage.clear();
                 localStorage.setItem('playlist_data', JSON.stringify(res.data.items));
             });
         }, _this.onPlaylistSelect = function (playlist_id) {
             _this.setState({ selected_playlist: playlist_id });
         }, _this.onTimerChanged = function (event) {
-            console.log(_this.state.timer);
             _this.setState({ timer: Math.abs(event.target.value) });
         }, _this.handleOpen = function () {
             _this.setState({ open: true });
@@ -65163,7 +65163,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var playlistDisplay = function playlistDisplay(props) {
     var allPlaylists = props.playlists.map(function (playlist) {
         if (playlist.owner.id === props.spotifyId) {
-            var pImage = '';
+            var pImage = 'https://picsum.photos/300/300';
             if (playlist.images.length > 0) {
                 if (playlist.images > 1) {
                     pImage = playlist.images[1].url;

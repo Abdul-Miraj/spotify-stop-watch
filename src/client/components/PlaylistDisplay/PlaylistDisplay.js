@@ -7,7 +7,7 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 const playlistDisplay = (props) => {
     const allPlaylists = props.playlists.map(playlist => {
         if (playlist.owner.id === props.spotifyId) {
-            let pImage = '';
+            let pImage = 'https://picsum.photos/300/300';
             if (playlist.images.length > 0) {
                 if (playlist.images > 1) {
                     pImage = playlist.images[1].url;

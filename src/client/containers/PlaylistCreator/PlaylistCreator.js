@@ -38,6 +38,7 @@ class PlaylistCreator extends Component {
         axios.get(Constants.SERVER_URL + 'users/' + this.props.spotifyId + '/playlists/')
             .then(res => {
                 this.setState({ playlist_data: res.data.items });
+                localStorage.clear();
                 localStorage.setItem('playlist_data', JSON.stringify(res.data.items));
             });
     };
@@ -47,7 +48,6 @@ class PlaylistCreator extends Component {
     };
 
     onTimerChanged = (event) => {
-        console.log(this.state.timer);
         this.setState({ timer: Math.abs(event.target.value) });
     };
 
