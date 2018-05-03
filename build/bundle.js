@@ -33994,7 +33994,7 @@ exports.default = App;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -34014,25 +34014,25 @@ var _materialUi = __webpack_require__(55);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var layout = function layout(props) {
-    return _react2.default.createElement(
-        _react.Fragment,
+  return _react2.default.createElement(
+    _react.Fragment,
+    null,
+    _react2.default.createElement(
+      _materialUi.AppBar,
+      { position: 'static', color: 'default' },
+      _react2.default.createElement(
+        _materialUi.Toolbar,
         null,
         _react2.default.createElement(
-            _materialUi.AppBar,
-            { position: 'static', color: 'default' },
-            _react2.default.createElement(
-                _materialUi.Toolbar,
-                null,
-                _react2.default.createElement(
-                    _materialUi.Typography,
-                    { variant: 'title', color: 'inherit', className: _Layout2.default.title },
-                    'Spotify Stop Watch'
-                ),
-                _react2.default.createElement(_Login2.default, { onClick: props.onLogClicked, logged: props.logged })
-            )
+          _materialUi.Typography,
+          { variant: 'title', color: 'inherit', className: _Layout2.default.title },
+          'Spotify Stop Watch'
         ),
-        props.logged ? props.children : null
-    );
+        _react2.default.createElement(_Login2.default, { onClick: props.onLogClicked, logged: props.logged })
+      )
+    ),
+    props.logged ? props.children : null
+  );
 };
 
 exports.default = layout;

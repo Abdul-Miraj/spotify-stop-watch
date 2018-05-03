@@ -99,7 +99,7 @@ function RetrieveTokens(req, res) {
 							*/
 
 							res.cookie('spotify_id', body.id);
-							res.redirect(302, 'http://localhost:8080/')
+							res.redirect(302, process.env.WEBSITE_CALLBACK);
 
 						}).catch(error => {
 							res.send(error);
