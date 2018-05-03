@@ -1,0 +1,14 @@
+.main {
+    margin: 0 -40px !important;
+    padding: 0.5em 3em !important;
+}
+
+.pDisplay {
+    overflow-y: auto;
+    height: 90vh;
+}
+
+.paper {
+    position: absolute;
+    background-color: white;
+}
