@@ -1,5 +1,5 @@
 const constants = {
-    "SERVER_URL": "http://localhost:8080/",
-    "SERVER_LOGIN": "http://localhost:8080/login"
+    "SERVER_URL": "https://spotify-stop-watch.herokuapp.com/",
+    "SERVER_LOGIN": "https://spotify-stop-watch.herokuapp.com/login"
 }
 export default constants;

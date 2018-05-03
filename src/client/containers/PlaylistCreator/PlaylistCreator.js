@@ -104,8 +104,13 @@ class PlaylistCreator extends Component {
                     </Typography>
 
                     <Typography variant='display1' color='inherit' gutterBottom>
-                        Simply log in using your Spotify account, select a playlist and enter how long you want the playlist to last (in minutes). Click create and on your Spotify account there will be a new playlist (called Spotify Stop Watch) of your desired length!
-                    </Typography>
+                        <ol>
+                            <li>Log in using Spotify</li>
+                            <li>Choose a Playlist</li>
+                            <li>Select a duration in minutes</li>
+                            <li>Click create!</li>
+                        </ol>
+                        </Typography>
                     <Form onTimerChange={this.onTimerChanged} value={this.state.timer} onCreatePlaylist={this.onCreatePlaylist} />
 
                     <Modal

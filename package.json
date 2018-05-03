@@ -39,6 +39,7 @@
   },
   "scripts": {
     "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js",
     "build": "webpack-dev-server",
     "webpack": "./node_modules/.bin/webpack -w"
   },

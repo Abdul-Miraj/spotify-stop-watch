@@ -9694,8 +9694,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var constants = {
-    "SERVER_URL": "http://localhost:8080/",
-    "SERVER_LOGIN": "http://localhost:8080/login"
+    "SERVER_URL": "https://spotify-stop-watch.herokuapp.com/",
+    "SERVER_LOGIN": "https://spotify-stop-watch.herokuapp.com/login"
 };
 exports.default = constants;
 
@@ -63877,7 +63877,30 @@ var PlaylistCreator = function (_Component) {
                     _react2.default.createElement(
                         _materialUi.Typography,
                         { variant: 'display1', color: 'inherit', gutterBottom: true },
-                        'Simply log in using your Spotify account, select a playlist and enter how long you want the playlist to last (in minutes). Click create and on your Spotify account there will be a new playlist (called Spotify Stop Watch) of your desired length!'
+                        _react2.default.createElement(
+                            'ol',
+                            null,
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Log in using Spotify'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Choose a Playlist'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Select a duration in minutes'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Click create!'
+                            )
+                        )
                     ),
                     _react2.default.createElement(_Form2.default, { onTimerChange: this.onTimerChanged, value: this.state.timer, onCreatePlaylist: this.onCreatePlaylist }),
                     _react2.default.createElement(
