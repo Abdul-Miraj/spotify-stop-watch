@@ -25,3 +25,13 @@
 .createPlaylistBtn {
     margin-top: 0.5em !important;
 }
+
+@media only screen and (max-width: 1024px) {
+    .playlistsDisplay {
+        width: 100% !important;
+    }
+
+    .RefreshIconBtn {
+        margin: auto;
+    }
+}

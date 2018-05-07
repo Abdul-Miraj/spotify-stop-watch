@@ -33774,12 +33774,10 @@ exports = module.exports = __webpack_require__(38)(undefined);
 
 
 // module
-exports.push([module.i, "body {\r\n  min-height: 100vh;\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: \"Roboto\", sans-serif;\r\n}\r\n\r\na {\r\n  color: white;\r\n  text-decoration: none; /* no underline */\r\n}\r\n\r\n.index__root__waFXB {\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n  min-height: 100vh;\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: \"Roboto\", sans-serif;\r\n}\r\n\r\na {\r\n  color: white;\r\n  text-decoration: none; /* no underline */\r\n}\r\n\r\n::-webkit-scrollbar { \r\n  display: none; \r\n}\r\n", ""]);
 
 // exports
-exports.locals = {
-	"root": "index__root__waFXB"
-};
+
 
 /***/ }),
 /* 216 */
@@ -33999,7 +33997,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var layout = function layout(props) {
   return _react2.default.createElement(
     _materialUi.Grid,
-    { container: true },
+    { container: true, className: _Layout2.default.allGrid },
     _react2.default.createElement(
       _materialUi.Grid,
       { item: true, xs: 12 },
@@ -34017,7 +34015,7 @@ var layout = function layout(props) {
               color: 'inherit',
               className: _Layout2.default.title
             },
-            'Spotify Stop Watch'
+            'Spotify Stopwatch'
           ),
           _react2.default.createElement(_Login2.default, {
             className: _Layout2.default.logSpotifyBtn,
@@ -34036,56 +34034,52 @@ var layout = function layout(props) {
       _materialUi.Grid,
       { item: true, xs: 12, className: _Layout2.default.gridDesc },
       _react2.default.createElement(
-        'div',
-        { className: _Layout2.default.mainDesc },
+        _materialUi.Typography,
+        { variant: 'display2', color: 'inherit', gutterBottom: true, className: _Layout2.default.descTitle },
+        'What is Spotify Stopwatch?'
+      ),
+      _react2.default.createElement(
+        _materialUi.Paper,
+        null,
         _react2.default.createElement(
           _materialUi.Typography,
-          { variant: 'display2', color: 'inherit', gutterBottom: true },
-          'What is Spotify Stop Watch?'
-        ),
-        _react2.default.createElement(
-          _materialUi.Paper,
-          null,
-          _react2.default.createElement(
-            _materialUi.Typography,
-            { variant: 'display1', color: 'inherit', gutterBottom: true },
-            'The Spotify Stop Watch is a web application that will build a playlist off of a playlist in your Spotify library of a length you desire. Perfect for when you have a limited amount of time and instead of checking the time or using an ordinary stop watch, the music will let you know when you have to go!'
-          )
-        ),
+          { variant: 'display1', color: 'inherit', gutterBottom: true, className: _Layout2.default.descText },
+          'The Spotify Stopwatch is a web application that will build a playlist off of a playlist in your Spotify library of a length you desire. Perfect for when you have a limited amount of time and instead of checking the time or using an ordinary stop watch, the music will let you know when you have to go!'
+        )
+      ),
+      _react2.default.createElement(
+        _materialUi.Typography,
+        { variant: 'display2', color: 'inherit', className: _Layout2.default.descTitle },
+        'How does this work?'
+      ),
+      _react2.default.createElement(
+        _materialUi.Paper,
+        null,
         _react2.default.createElement(
           _materialUi.Typography,
-          { variant: 'display2', color: 'inherit', gutterBottom: true },
-          'How does this work?'
-        ),
-        _react2.default.createElement(
-          _materialUi.Paper,
-          null,
+          { variant: 'display1', color: 'inherit', className: _Layout2.default.descText },
           _react2.default.createElement(
-            _materialUi.Typography,
-            { variant: 'display1', color: 'inherit', gutterBottom: true },
+            'ol',
+            null,
             _react2.default.createElement(
-              'ol',
+              'li',
               null,
-              _react2.default.createElement(
-                'li',
-                null,
-                'Log in using Spotify'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Choose a Playlist'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Select a duration in minutes'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Click create!'
-              )
+              'Log in using Spotify'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Choose a Playlist'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Select a duration in minutes'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Click create!'
             )
           )
         )
@@ -34093,7 +34087,7 @@ var layout = function layout(props) {
     ),
     _react2.default.createElement(
       _materialUi.Grid,
-      { item: true, xs: 12, align: 'flex-end' },
+      { item: true, xs: 12, className: _Layout2.default.footerGrid },
       _react2.default.createElement(
         _materialUi.AppBar,
         { position: 'static', className: _Layout2.default.botBar },
@@ -34108,17 +34102,25 @@ var layout = function layout(props) {
               className: _Layout2.default.title,
               align: 'center'
             },
-            'Made with ',
+            'Made with',
+            ' ',
             _react2.default.createElement(
               'span',
               null,
               _react2.default.createElement(_MusicNote2.default, { className: _Layout2.default.musicNoteIcon })
             ),
-            ' By ',
+            ' ',
+            'By',
+            ' ',
             _react2.default.createElement(
               'a',
-              { className: _Layout2.default.githubLink, href: 'https://github.com/Abdul-Miraj' },
-              ' Abdul Miraj '
+              {
+                className: _Layout2.default.githubLink,
+                href: 'https://github.com/Abdul-Miraj'
+              },
+              ' ',
+              'Abdul Miraj',
+              ' '
             )
           )
         )
@@ -63882,20 +63884,21 @@ exports = module.exports = __webpack_require__(38)(undefined);
 
 
 // module
-exports.push([module.i, ".Layout__mainDesc__2aQCu {\r\n    width: 80%;\r\n    margin: auto;\r\n}\r\n\r\n.Layout__topBar__N3XOw {\r\n    background-color: black !important;\r\n}\r\n\r\n.Layout__mainToolBar__2e9q4 {\r\n    width: 80%;\r\n    -ms-flex-item-align: center;\r\n        align-self: center;\r\n}\r\n\r\n.Layout__title__3k831 {\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n}\r\n\r\n.Layout__logoImg__28kwy {\r\n    margin-right: 0.1em;\r\n}\r\n\r\n.Layout__botBar__RHly4 {\r\n    -webkit-box-flex: 1 !important;\r\n        -ms-flex-positive: 1 !important;\r\n            flex-grow: 1 !important;\r\n    background-color: black !important;\r\n}\r\n\r\n.Layout__gridDesc__vbYcA {\r\n    -webkit-box-flex: 1 !important;\r\n        -ms-flex-positive: 1 !important;\r\n            flex-grow: 1 !important;\r\n}\r\n\r\n.Layout__botToolBar__mEkP9 {\r\n}\r\n\r\n.Layout__githubLink__1dzNp {\r\n    color: #1db954;\r\n}\r\n\r\n.Layout__githubLink__1dzNp:hover {\r\n    color: #1ed760;\r\n}\r\n\r\n.Layout__musicNoteIcon__2Ohim {\r\n    color: #1db954;\r\n}\r\n", ""]);
+exports.push([module.i, ".Layout__allGrid__1eyZB {\r\n    min-height: 100vh;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n}\r\n\r\n.Layout__gridDesc__vbYcA {\r\n    margin-top: 10px !important;\r\n    width: 80%;\r\n    -ms-flex-item-align: center;\r\n        align-self: center;\r\n}\r\n\r\n.Layout__topBar__N3XOw {\r\n    background-color: black !important;\r\n}\r\n\r\n.Layout__mainToolBar__2e9q4 {\r\n    width: 80%;\r\n    -ms-flex-item-align: center;\r\n        align-self: center;\r\n}\r\n\r\n.Layout__title__3k831 {\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n}\r\n\r\n.Layout__logoImg__28kwy {\r\n    margin-right: 0.1em;\r\n}\r\n\r\n.Layout__botBar__RHly4 {\r\n    background-color: black !important;\r\n}\r\n\r\n.Layout__githubLink__1dzNp {\r\n    color: #1db954;\r\n}\r\n\r\n.Layout__githubLink__1dzNp:hover {\r\n    color: #1ed760;\r\n}\r\n\r\n.Layout__musicNoteIcon__2Ohim {\r\n    color: #1db954;\r\n}\r\n\r\n@media only screen and (max-width: 425px) {\r\n    .Layout__descText__3YUV0 {\r\n        font-size: 1rem !important;\r\n    }\r\n\r\n    .Layout__descTitle__1WRs6 {\r\n        font-size: 1.2rem !important;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"mainDesc": "Layout__mainDesc__2aQCu",
+	"allGrid": "Layout__allGrid__1eyZB",
+	"gridDesc": "Layout__gridDesc__vbYcA",
 	"topBar": "Layout__topBar__N3XOw",
 	"mainToolBar": "Layout__mainToolBar__2e9q4",
 	"title": "Layout__title__3k831",
 	"logoImg": "Layout__logoImg__28kwy",
 	"botBar": "Layout__botBar__RHly4",
-	"gridDesc": "Layout__gridDesc__vbYcA",
-	"botToolBar": "Layout__botToolBar__mEkP9",
 	"githubLink": "Layout__githubLink__1dzNp",
-	"musicNoteIcon": "Layout__musicNoteIcon__2Ohim"
+	"musicNoteIcon": "Layout__musicNoteIcon__2Ohim",
+	"descText": "Layout__descText__3YUV0",
+	"descTitle": "Layout__descTitle__1WRs6"
 };
 
 /***/ }),
@@ -64235,7 +64238,7 @@ var PlaylistCreator = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 _materialUi.Grid,
-                { container: true, align: 'center', spacing: 40, className: _PlaylistCreator2.default.main },
+                { container: true, align: 'center', className: _PlaylistCreator2.default.main },
                 _react2.default.createElement(
                     _materialUi.Grid,
                     { item: true, xs: 12, className: _PlaylistCreator2.default.pDisplay },
@@ -65543,7 +65546,7 @@ exports = module.exports = __webpack_require__(38)(undefined);
 
 
 // module
-exports.push([module.i, ".Playlist__playlistCard__3sRB6 {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n\r\n.Playlist__content__3vdeO {\r\n    width: 100%;\r\n\r\n}\r\n\r\n.Playlist__add__2ja_V {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: end;\r\n        -ms-flex-pack: end;\r\n            justify-content: flex-end;\r\n    margin-right: 0.5em;\r\n    \r\n}\r\n\r\n.Playlist__cover__3Bohp {\r\n    width: 150px;\r\n    height: 150px;\r\n}", ""]);
+exports.push([module.i, ".Playlist__playlistCard__3sRB6 {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n\r\n.Playlist__content__3vdeO {\r\n    width: 100%;\r\n}\r\n\r\n.Playlist__add__2ja_V {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: end;\r\n        -ms-flex-pack: end;\r\n            justify-content: flex-end;\r\n    margin-right: 0.5em;\r\n    \r\n}\r\n\r\n.Playlist__cover__3Bohp {\r\n    width: 150px;\r\n    height: 150px;\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -65593,7 +65596,7 @@ exports = module.exports = __webpack_require__(38)(undefined);
 
 
 // module
-exports.push([module.i, ".PlaylistDisplay__playlistsDisplay__havnO {\r\n    width: 50% !important;\r\n}\r\n\r\n.PlaylistDisplay__playlists__2S2a9 {\r\n    overflow-y: auto;\r\n    height: 50vh;\r\n    -webkit-box-sizing: content-box;\r\n            box-sizing: content-box;\r\n}\r\n\r\n.PlaylistDisplay__playlistsDisplayText__3WUak {\r\n    color: white !important;\r\n}\r\n\r\n.PlaylistDisplay__RefreshIconBtn__9bRU2 {\r\n    -ms-flex-line-pack: start;\r\n        align-content: flex-start;\r\n    background-color: #1db954 !important;\r\n    margin-bottom: 0.5em !important;\r\n}\r\n\r\n.PlaylistDisplay__RefreshIconBtn__9bRU2:hover {\r\n    background-color: #1ed760 !important;\r\n}\r\n\r\n.PlaylistDisplay__createPlaylistBtn__1u-AF {\r\n    margin-top: 0.5em !important;\r\n}", ""]);
+exports.push([module.i, ".PlaylistDisplay__playlistsDisplay__havnO {\r\n    width: 50% !important;\r\n}\r\n\r\n.PlaylistDisplay__playlists__2S2a9 {\r\n    overflow-y: auto;\r\n    height: 50vh;\r\n    -webkit-box-sizing: content-box;\r\n            box-sizing: content-box;\r\n}\r\n\r\n.PlaylistDisplay__playlistsDisplayText__3WUak {\r\n    color: white !important;\r\n}\r\n\r\n.PlaylistDisplay__RefreshIconBtn__9bRU2 {\r\n    -ms-flex-line-pack: start;\r\n        align-content: flex-start;\r\n    background-color: #1db954 !important;\r\n    margin-bottom: 0.5em !important;\r\n}\r\n\r\n.PlaylistDisplay__RefreshIconBtn__9bRU2:hover {\r\n    background-color: #1ed760 !important;\r\n}\r\n\r\n.PlaylistDisplay__createPlaylistBtn__1u-AF {\r\n    margin-top: 0.5em !important;\r\n}\r\n\r\n@media only screen and (max-width: 1024px) {\r\n    .PlaylistDisplay__playlistsDisplay__havnO {\r\n        width: 100% !important;\r\n    }\r\n\r\n    .PlaylistDisplay__RefreshIconBtn__9bRU2 {\r\n        margin: auto;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -65671,7 +65674,7 @@ exports = module.exports = __webpack_require__(38)(undefined);
 
 
 // module
-exports.push([module.i, ".PlaylistCreator__main__1OAZM {\r\n    margin: 0 -40px !important;\r\n    padding: 0.5em 3em !important;\r\n    background-image: -webkit-gradient(linear,left top, right top,color-stop(0, #2c5e92),color-stop(80%, #552f6d));\r\n    background-image: linear-gradient(90deg,#2c5e92 0,#552f6d 80%);\r\n}\r\n\r\n.PlaylistCreator__paper__1D99F {\r\n    position: absolute;\r\n    background-color: white;\r\n}\r\n", ""]);
+exports.push([module.i, ".PlaylistCreator__main__1OAZM {\r\n    padding: 0.5em 3em !important;\r\n    background-image: -webkit-gradient(linear,left top, right top,color-stop(0, #2c5e92),color-stop(80%, #552f6d));\r\n    background-image: linear-gradient(90deg,#2c5e92 0,#552f6d 80%);\r\n}\r\n\r\n.PlaylistCreator__paper__1D99F {\r\n    position: absolute;\r\n    background-color: white;\r\n}\r\n", ""]);
 
 // exports
 exports.locals = {

@@ -82,7 +82,7 @@ class PlaylistCreator extends Component {
 
     render() {
         return (
-            <Grid container align='center' spacing={40} className={classes.main}>
+            <Grid container align='center' className={classes.main}>
                 <Grid item xs={12} className={classes.pDisplay} >
                     <PlaylistDisplay
                         selected={this.state.selected_playlist}
@@ -93,7 +93,6 @@ class PlaylistCreator extends Component {
                 </Grid>
                 <Grid item xs={12}>
                     <Form onTimerChange={this.onTimerChanged} value={this.state.timer} onCreatePlaylist={this.onCreatePlaylist} />
-
                     <Modal
                         aria-labelledby="simple-modal-title"
                         aria-describedby="simple-modal-description"
