@@ -1,5 +1,6 @@
 import React from 'react';
 import constants from '../../assets/Constants'
+import classes from './Login.css'
 
 import { Button } from 'material-ui';
 
@@ -11,11 +12,11 @@ const logIn = (props) => {
     if (props.logged === true){
         buttonText = "Log out";
         return (
-            <Button color='inherit' onClick={props.onClick}>{buttonText}</Button>
+            <Button className={classes.logOutBtn} color='inherit' onClick={props.onClick}>{buttonText}</Button>
         );
     } else {
         return (
-            <Button color='inherit' href={loggedURL}>{buttonText}</Button>
+            <Button className={classes.logOutBtn} color='inherit' href={loggedURL}>{buttonText}</Button>
         );
     }
 

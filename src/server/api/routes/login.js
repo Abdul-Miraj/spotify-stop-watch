@@ -13,10 +13,4 @@ router.get('/callback', (req, res) => {
 	SpotifyLogin.RetrieveTokens(req,res);
 });
 
-router.get('/display_db', (req, res) => {
-	SpotifyUser.find({}, (err, data) => {
-		res.send(data);
-	});
-});
-
 module.exports = router;

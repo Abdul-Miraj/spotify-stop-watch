@@ -39,9 +39,8 @@
   },
   "scripts": {
     "start": "node src/server/server.js",
-    "dev": "nodemon src/server/server.js",
-    "build": "webpack-dev-server",
-    "webpack": "./node_modules/.bin/webpack -w"
+    "start:dev": "nodemon src/server/server.js",
+    "build": "./node_modules/.bin/webpack -w"
   },
   "jest": {
     "collectCoverageFrom": [

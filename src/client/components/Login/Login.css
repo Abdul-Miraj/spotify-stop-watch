@@ -1,0 +1,15 @@
+.logInBtn {
+    background-color: #1db954 !important;
+}
+
+.logInBtn:hover {
+    background-color: #1ed760 !important;
+}
+
+.logOutBtn {
+    background-color: #1db954 !important;
+}
+
+.logOutBtn:hover {
+    background-color: #1ed760 !important;
+}

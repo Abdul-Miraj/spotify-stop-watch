@@ -1,4 +1,17 @@
-.createButton {
-    display: flex;
-    justify-content: flex-end;
+.createPlaylistBtn {
+    margin-top: 0.5em !important;
+    background-color: #1db954 !important;
+    color: white !important;
+}
+
+.createPlaylistBtn:hover {
+    background-color: #1ed760 !important;
+}
+
+.timerTitle {
+    color: white !important;
+}
+
+.inputField {
+    background-image: linear-gradient(90deg,#c074b2,#8ab5e8);
 }

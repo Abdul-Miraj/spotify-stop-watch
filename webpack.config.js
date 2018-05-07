@@ -1,9 +1,9 @@
-var path = require ('path');
+const path = require ('path');
 const autoprefixer = require ('autoprefixer');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
 
-var BUILD_DIR = path.resolve (__dirname, './build');
-var APP_DIR = path.resolve (__dirname, './src/client');
+const BUILD_DIR = path.resolve (__dirname, './build');
+const APP_DIR = path.resolve (__dirname, './src/client');
 
 const config = {
   entry: {

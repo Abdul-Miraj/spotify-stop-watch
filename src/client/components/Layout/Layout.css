@@ -1,3 +1,45 @@
+.mainDesc {
+    width: 80%;
+    margin: auto;
+}
+
+.topBar {
+    background-color: black !important;
+}
+
+.mainToolBar {
+    width: 80%;
+    align-self: center;
+}
+
 .title {
     flex: 1;
+}
+
+.logoImg {
+    margin-right: 0.1em;
+}
+
+.botBar {
+    flex-grow: 1 !important;
+    background-color: black !important;
+}
+
+.gridDesc {
+    flex-grow: 1 !important;
+}
+
+.botToolBar {
+}
+
+.githubLink {
+    color: #1db954;
+}
+
+.githubLink:hover {
+    color: #1ed760;
+}
+
+.musicNoteIcon {
+    color: #1db954;
 }

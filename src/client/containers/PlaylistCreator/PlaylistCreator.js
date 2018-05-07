@@ -82,8 +82,8 @@ class PlaylistCreator extends Component {
 
     render() {
         return (
-            <Grid container spacing={40} className={classes.main}>
-                <Grid item xs={12} md={4} className={classes.pDisplay} >
+            <Grid container align='center' spacing={40} className={classes.main}>
+                <Grid item xs={12} className={classes.pDisplay} >
                     <PlaylistDisplay
                         selected={this.state.selected_playlist}
                         onPlaylistSelect={this.onPlaylistSelect}
@@ -91,26 +91,7 @@ class PlaylistCreator extends Component {
                         spotifyId={this.props.spotifyId}
                         onLoadPlaylists={this.onLoadPlaylists} />
                 </Grid>
-                <Grid item xs={12} md={8}>
-                    <Typography variant='display2' color='inherit' gutterBottom>
-                        What is Spotify Stop Watch?
-                    </Typography>
-                    <Typography variant='display1' color='inherit' gutterBottom>
-                        The Spotify Stop Watch is a web application that will build a playlist off of a playlist in your Spotify library of a length you desire. Perfect for when you have a limited amount of time and instead of checking the time or using an ordinary stop watch, the music will let you know when you have to go!
-                    </Typography>
-
-                    <Typography variant='display2' color='inherit' gutterBottom>
-                        How does this work?
-                    </Typography>
-
-                    <Typography variant='display1' color='inherit' gutterBottom>
-                        <ol>
-                            <li>Log in using Spotify</li>
-                            <li>Choose a Playlist</li>
-                            <li>Select a duration in minutes</li>
-                            <li>Click create!</li>
-                        </ol>
-                        </Typography>
+                <Grid item xs={12}>
                     <Form onTimerChange={this.onTimerChanged} value={this.state.timer} onCreatePlaylist={this.onCreatePlaylist} />
 
                     <Modal
@@ -118,7 +99,7 @@ class PlaylistCreator extends Component {
                         aria-describedby="simple-modal-description"
                         open={this.state.open}
                         onClose={this.handleClose}>
-                        <div style={{ top: '60vh', left: '50vw' }} className={classes.paper}>
+                        <div style={{ top: '50vh', left: '40vw' }} className={classes.paper}>
                             <Typography variant="title" id="modal-title">
                                 Playlist has successfully been created!
                              </Typography>

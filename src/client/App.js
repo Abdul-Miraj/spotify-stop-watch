@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react';
 import Layout from './components/Layout/Layout';
 import PlaylistCreator from './containers/PlaylistCreator/PlaylistCreator'
 
-import CssBaseline from 'material-ui/CssBaseline';
-
 class App extends Component {
 
   constructor(props) {
@@ -35,7 +33,6 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <CssBaseline />
         <Layout onLogClicked={this.onLogClicked} logged={this.state.logged}>
           <PlaylistCreator spotifyId={this.state.spotify_id} />
         </Layout>

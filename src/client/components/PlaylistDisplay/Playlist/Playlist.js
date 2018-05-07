@@ -8,14 +8,17 @@ import classes from './Playlist.css';
 
 const playlist = (props) => {
 
-    let selectedBoxColor = 'action';
+    const playlistCardStyles = {
+        display: 'flex',
+        backgroundColor: '#ecebe8',
+    }
 
     if(props.id === props.selected) {
-        selectedBoxColor = 'primary';
+        playlistCardStyles['backgroundColor'] = 'white';
     }
 
     return (
-        <Card className={classes.card}>
+        <Card style={playlistCardStyles} onClick={() => props.onPlaylistSelect(props.id)}>
             <CardMedia
                 className={classes.cover}
                 image={props.playlistImage}
@@ -28,12 +31,6 @@ const playlist = (props) => {
                         <Typography variant="subheading" color="textSecondary">{props.playlistOwner}</Typography>
                         <Typography variant="caption" color="textSecondary">Number of Tracks: {props.numberOfTracks}</Typography>
                     </CardContent>
-                </div>
-
-                <div className={classes.add}>
-                    <IconButton aria-label="Play/pause">
-                        <AddBox color={selectedBoxColor} onClick={() => props.onPlaylistSelect(props.id)} className={classes.SkipPreviousIcon} />
-                    </IconButton>
                 </div>
             </div>
         </Card>
