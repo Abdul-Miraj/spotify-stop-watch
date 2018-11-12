@@ -1,1 +1,0 @@
-# spotify-stop-watch

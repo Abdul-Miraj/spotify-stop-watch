@@ -1,1 +1,1 @@
-# spotify-stop-watch
+Spotify Stopwatch
