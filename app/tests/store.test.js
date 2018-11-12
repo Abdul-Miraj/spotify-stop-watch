@@ -17,6 +17,7 @@ describe('configureStore', () => {
       expect(typeof store.injectedReducers).toBe('object');
     });
   });
+});
 
 describe('configureStore params', () => {
   it('should call window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__', () => {

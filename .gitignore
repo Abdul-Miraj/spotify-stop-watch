@@ -8,3 +8,6 @@ stats.json
 .DS_Store
 npm-debug.log
 .idea
+
+# dotenv environment variables file
+.env
